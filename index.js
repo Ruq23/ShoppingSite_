@@ -31,7 +31,7 @@ const cart = require('./models/cart.js');
 // const mongoStore = require('connect-mongo')(session);
 
 
-mongoose.connect('mongodb://localhost:27017/shopApp', {
+mongoose.connect('mongodb://localhost:27017/shopAppGH', {
     useNewUrlParser: true,
     useUnifiedTopology: true
 });
