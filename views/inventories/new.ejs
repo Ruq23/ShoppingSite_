@@ -1,0 +1,57 @@
+<% layout('layouts/boilerplate') %> 
+
+    <div class="row">
+        <h1 class="text-center">Add to Inventory</h1>
+        <div class="col-6 offset-3">
+            <form action="/list" method="POST" class="validated-form" novalidate enctype="multipart/form-data">
+                 <div class="mb-3">
+                 <label class="form-label" for="category">Category</label>
+                <!-- <input class="form-control" type="text" name="inventory[category]" id="category"> -->
+                <select name="inventory[category]" id="category">
+                    <% for(let category of categories) { %> 
+                        <option value="<%=category%>"><%=category%></option>
+                    <% } %> 
+                </select>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" for="brand">Brand</label>
+                    <input class="form-control" type="text" name="inventory[brand]" id="brand">
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" for="name">Name</label>
+                    <input class="form-control" type="text" name="inventory[name]" id="name">
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label for="image" class="form-label"></label>
+                    <input class="form-control form-control-sm" id="image" type="file" name="image" multiple>
+                </div>
+                <div class="mb-3">
+                <label class="form-label" for="price"> Price</label>
+                <div class="input-group">
+                    <span class="input-group-text" id="price-label">$</span>
+                    <input type="text" class="form-control" placeholder="0.00" aria-label="price" aria-describedby="price-label" name="inventory[price]">
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                </div>
+            </div>
+                <div class="mb-3">
+                    <label class="form-label" for="specifications">Specs</label>
+                    <textarea class="form-control" type="text" name="inventory[specifications]" id="specifications"> </textarea>
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                </div>
+                <div class="mb-3">
+                <button class="btn btn-success">Add to Inventory</button>
+                </div>
+                <a href="/list">All Items in Inventory</a>
+            </form>
+        </div>
+    </div>
