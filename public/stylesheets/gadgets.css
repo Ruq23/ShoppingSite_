@@ -1,0 +1,383 @@
+/* HEADER AND FOOTER */
+
+.d-flex i {
+    padding-right: 32px;
+}
+
+
+footer {
+    padding-top: 7%;
+    padding-left: 35px;
+    padding-right: 35px;
+    padding-bottom: 50px;
+    /* background: #9aa9a7; */
+    background-color: #9aa9a7;
+    position: relative;
+    top: 0px;
+    font-family: 'Open Sans', sans-serif;
+
+}
+
+/* FOOTER */
+footer ul {
+   list-style: none;
+   margin-left: -15%;
+   font-size: 13px;
+}
+
+.fix-one ul {
+   margin-left: -20%;
+}
+
+.fix-two ul {
+    margin-left: -17%;
+ }
+
+ .fix-three ul {
+    margin-left: -18%;
+ }
+
+footer li {
+   margin-bottom: 10px;
+ }
+
+footer h6 {
+  margin-bottom: 15%;
+ }
+
+.paragraph p {
+    font-family: 'Open Sans', sans-serif;
+    margin-bottom: -20px;
+ }
+
+ .pa{
+    font-family: 'Open Sans', sans-serif;
+    margin-bottom: 40px;
+ }
+
+ .logo-footer {
+    position: relative;
+    top: 50px;
+ }
+
+ .logo-footer b {
+   font-size: x-large;
+   font-weight: 900;
+ }
+
+ nav {
+    color: black;
+    background-color: #9aa9a7;
+ }
+
+
+ #basic-addon2{
+    background-color: #716565;
+    color: #FFFFFF;
+    border: 1px #9aa9a7;
+    border-radius: 1px 7px 7px 1px;
+    font-family: 'Open Sans', sans-serif;
+ }
+
+ .last input{
+    border-radius: 10px 10px;
+    padding: 13px;
+    font-family: 'Open Sans', sans-serif;
+
+ }
+
+
+/* HEADER AND FOOTER */
+
+.nunu li {
+    list-style: none;
+    padding-bottom: 26px;
+}
+.nunu a {
+    color: black;
+}
+
+
+
+.nunu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.ni-one h4 {
+    text-align: center;
+    padding-top: 100px;
+
+
+}
+
+.ni-one p {
+    width: 900px;
+    position: relative;
+    left: 200px;
+
+    text-align: center;
+    padding-top: 20px;
+    word-spacing: 5px;
+    line-height: 30px;
+    /* padding-left: 10px; */
+    /* padding-right: 20px; */
+    padding-bottom: 15px;
+}
+
+.ni-one {
+    margin-top: 40px;
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-bottom:120px;
+    /* background-color: #9aa9a7; */
+    padding-bottom: 40px;
+}
+
+.nununu h6{
+    display: inline;
+}
+
+.nununu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-right: 40px;
+    margin-left: 40px;
+}
+
+.imgs img{
+    width: 440px;
+    height: 500px;
+    margin-top: 25px;
+
+}
+
+.imgs {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-right: 40px;
+    margin-left: -30px;
+    margin-bottom: 80px;
+}
+
+.imgs span {
+    position: absolute;
+    left: 395px;
+    top: 6px;
+}
+
+.imgss {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-right: 40px;
+    margin-left: -30px;
+    margin-bottom: 80px;
+}
+
+.imgss img{
+    width: 440px;
+    height: 500px;
+    margin-top: 25px;
+
+}
+
+.imgss span {
+    position: absolute;
+    left: 390px;
+    top: 6px;
+}
+
+hr {
+    width: 70%;
+    position: relative;
+    left: 250px;
+}
+
+.last-sec h5 {
+    text-align: center;
+    margin-top: 80px;
+}
+
+.last-sec button {
+   margin-left: 330px;
+   margin-top: 40px;
+   padding: 10px 310px;
+   margin-bottom: 60px;
+   background-color: #9aa9a7;
+   color: white;
+   border: 1px solid #9aa9a7;
+}
+
+.numero {
+    position: absolute;
+    left: 31px;
+}
+
+h5:hover {
+    text-decoration: underline;
+  }
+
+  /* TEST */
+  .content {
+    /* height: 100px;
+    width: 45%;
+    color: #fff;
+    font-size: 24px; */
+    /* line-height: 100px; centering text just for view */
+    /* text-align: center;
+    background-color: grey;
+    margin: 5px;
+    border: 1px solid lightgrey; */
+    display: none;
+    
+  }
+  #loadMore {
+    margin-left: 330px;
+    margin-top: 40px;
+    padding: 10px 310px;
+    margin-bottom: 60px;
+    background-color: #9aa9a7;
+    color: white;
+    border: 1px solid #9aa9a7;
+    transition: 0.3s;
+  }
+  #loadMore:hover {
+    color: #9aa9a7;
+    background-color: #fff;
+    border: 1px solid #9aa9a7;
+    text-decoration: none;
+  }
+  .noContent {
+    color: #000 !important;
+    background-color: transparent !important;
+    pointer-events: none;
+  }
+  
+   h5:hover {
+    text-decoration: underline;
+  }
+
+/* POP-UP */
+/* {box-sizing: border-box;} */
+
+/* Button used to open the contact form - fixed at the bottom of the page */
+.open-button {
+  /* background-color: #555; */
+  color: black;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  opacity: 0.8;
+  /* position: fixed;
+  bottom: 23px;
+  right: 28px; */
+  /* width: 280px; */
+}
+
+/* The popup form - hidden by default */
+.form-popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 15px;
+  border: 3px solid #f1f1f1;
+  z-index: 9;
+}
+
+/* Add styles to the form container */
+.form-container {
+  max-width: 300px;
+  padding: 10px;
+  background-color: white;
+}
+
+/* Full-width input fields */
+.form-container input[type=text], .form-container input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+}
+
+/* When the inputs get focus, do something */
+.form-container input[type=text]:focus, .form-container input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Set a style for the submit/login button */
+.form-container .btn {
+  background-color: black;
+  color: white;
+  padding: 8px 10px;
+  border: none;
+  cursor: pointer;
+  width: 90%;
+  margin-bottom:10px;
+  opacity: 0.8;
+
+}
+
+/* Add a red background color to the cancel button */
+.form-container .cancel {
+  background-color: black;
+}
+
+.form-container .ma {
+    margin-bottom: 10px;
+  }
+  
+
+
+
+/* Add some hover effects to buttons */
+.form-container .btn:hover, .open-button:hover {
+  opacity: 1;
+}
+
+/* Dropdown Button */
+.dropbtn {
+    background-color: black;
+    color: white;
+    padding: 8px;
+    font-size: medium;
+    border: none;
+  }
+  
+  /* The container <div> - needed to position the dropdown content */
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  /* Dropdown Content (Hidden by Default) */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  /* Links inside the dropdown */
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  /* Change color of dropdown links on hover */
+  .dropdown-content a:hover {background-color: #ddd;}
+  
+  /* Show the dropdown menu on hover */
+  .dropdown:hover .dropdown-content {display: block;}
+  
+  /* Change the background color of the dropdown button when the dropdown content is shown */
+  .dropdown:hover .dropbtn {background-color: white; color: black;}

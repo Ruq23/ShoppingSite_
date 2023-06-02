@@ -1,0 +1,804 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <link rel="stylesheet" href="/stylesheets/gadgets.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light mb-5 pt-4 pb-4">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="/"><b>RUQ</b></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse offset-1" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active pe-5" aria-current="page" href="newin">New In</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active pe-5" href="fashion">Fashion</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active pe-5" href="gadgets">Gadgets</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active pe-5" href="#">Furniture</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active pe-5" href="#">Electronics</a>
+              </li>
+              <!-- <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Category
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+              </li> -->
+              <!-- <li class="nav-item">
+                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+              </li> -->
+            </ul>
+        </div>
+
+            <form class="d-flex">
+                <i class="fa fa-search" aria-hidden="true"></i>
+                <i class="fa fa-user" aria-hidden="true"></i>
+                <i class="fa fa-shopping-bag" aria-hidden="true"></i>
+              <!-- <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button> -->
+            </form>
+          </div>
+        </div>
+      </nav>
+      <main>
+        <h5 class="numero"> <a style="text-decoration: none; color:black" href="hero.html">Home / </a> <b> <a style="text-decoration: none; color:black" href="newin.html"> Gadgets </a></b></h5>
+        <div class="ni-one">
+            <h4>RUQ GADGETS</h4>
+            <p>RuqGadgets is a bustling haven for tech enthusiasts and casual shoppers alike. Its shelves are adorned with the latest and greatest gadgets, from cutting-edge smartphones to sleek smartwatches, virtual reality headsets to high-performance laptops. Our store boasts an array of accessories and peripherals to enhance the tech experience, including wireless headphones, portable chargers, and stylish phone cases. Knowledgeable staff members are always on hand to provide expert advice and guidance, ensuring customers make informed choices. With its vibrant atmosphere and wide range of innovative products, RuqGadgets is a one-stop destination for all things tech, catering to the needs of modern-day gadget lovers.</p>
+        
+        </div>
+    
+        <div class="nununu">
+            <h6 class="open-button" onclick="openForm()">Filters By</h6>
+            <!-- <button class="open-button" onclick="openForm()">Open Form</button> -->
+
+<!-- The form -->
+<!-- gadgets?brand=Samsung -->
+
+<div class="form-popup" id="myForm">
+  <form action="/action_page.php" class="form-container">
+    <h5>FILTER</h5>
+    <div class="ma">
+        <div class="dropdown">
+            <button class="dropbtn">Sort By Brand</button>
+            <div class="dropdown-content">
+              <a href="gadgets?brand=Apple">Apple</a>
+              <a href="gadgets?brand=Samsung">Samsung</a>
+              <a href="gadgets?brand=HP">Hp</a>
+              <a href="gadgets?brand=Dell">Dell</a>
+              <a href="gadgets?brand=Google">Google</a>
+              <a href="gadgets?brand=JBL">JBL</a>
+              <a href="gadgets?brand=Sony">Sony</a>
+              <a href="gadgets?brand=Beats">Beats</a>
+            </div>
+          </div>
+
+</div>
+<div class="ma">
+    <label for="">Price: High To Low</label>
+    <input type="checkbox" name="htl"> 
+</div>
+<div class="ma">
+    <label for="">Price: Low To High</label>
+    <input type="checkbox" name="lth">
+</div>
+
+    <button type="submit" class="btn">Apply Filters</button>
+    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+  </form>
+</div>
+            <h6>350 Item(s)</h6>
+            <h6>Sort By: Must Have</h6>
+</div>
+
+        <div class="container">
+            <div class="content">
+              <div class="imgs">
+                <% for(invent of inventories) { %>
+                <div style="margin-right: 20px;">
+                    <div>
+                        <img src="<%=invent.image[0].url %>" alt="">
+                    </div>
+                        <sub>
+                            <small>Category: Gadgets <span><%=invent.price %></span></small> <br>
+                            <small><a style="color: black; text-decoration:none" href="/list/<%=invent._id %>"> <%=invent.brand%> <%=invent.name%> </a></small>
+                       </sub>
+                </div>
+                <% } %>
+
+              </div>
+            </div>
+            <div class="content">
+                <div class="imgs">
+                  <% for(invent of inventoriess) { %>
+                  <div style="margin-right: 20px;">
+                      <div>
+                          <img src="<%=invent.image[0].url %>" alt="">
+                      </div>
+                          <sub>
+                              <small>Category: Gadgets <span><%=invent.price %></span></small> <br>
+                              <small><a style="color: black; text-decoration:none" href="/list/<%=invent._id %>"> <%=invent.brand%> <%=invent.name%> </a></small>
+                         </sub>
+                  </div>
+                  <% } %>
+  
+                </div>
+              </div>
+              <div class="content">
+                <div class="imgs">
+                  <% for(invent of inventoriesss) { %>
+                  <div style="margin-right: 20px;">
+                      <div>
+                          <img src="<%=invent.image[0].url %>" alt="">
+                      </div>
+                          <sub>
+                              <small>Category: Gadgets <span><%=invent.price %></span></small> <br>
+                              <small><a style="color: black; text-decoration:none" href="/list/<%=invent._id %>"> <%=invent.brand%> <%=invent.name%> </a></small>
+                         </sub>
+                  </div>
+                  <% } %>
+  
+                </div>
+              </div>
+              <div class="content">
+                <div class="imgs">
+                  <% for(invent of inventoriessss) { %>
+                  <div style="margin-right: 20px;">
+                      <div>
+                          <img src="<%=invent.image[0].url %>" alt="">
+                      </div>
+                          <sub>
+                              <small>Category: Gadgets <span><%=invent.price %></span></small> <br>
+                             <small><a style="color: black; text-decoration:none" href="/list/<%=invent._id %>"> <%=invent.brand%> <%=invent.name%> </a></small>
+                         </sub>
+                  </div>
+                  <% } %>
+  
+                </div>
+              </div>
+              <div class="content">
+                <div class="imgs">
+                  <% for(invent of inventoriesssss) { %>
+                  <div style="margin-right: 20px;">
+                      <div>
+                          <img src="<%=invent.image[0].url %>" alt="">
+                      </div>
+                          <sub>
+                              <small>Category: Gadgets <span><%=invent.price %></span></small> <br>
+                              <small><a style="color: black; text-decoration:none" href="/list/<%=invent._id %>"> <%=invent.brand%> <%=invent.name%> </a></small>
+                         </sub>
+                  </div>
+                  <% } %>
+  
+                </div>
+              </div>
+              <div class="content">
+                <div class="imgs">
+                  <% for(invent of inventoriessssss) { %>
+                  <div style="margin-right: 20px;">
+                      <div>
+                          <img src="<%=invent.image[0].url %>" alt="">
+                      </div>
+                          <sub>
+                              <small>Category: Gadgets <span><%=invent.price %></span></small> <br>
+                              <small><a style="color: black; text-decoration:none" href="/list/<%=invent._id %>"> <%=invent.brand%> <%=invent.name%> </a></small>
+                         </sub>
+                  </div>
+                  <% } %>
+  
+                </div>
+              </div>
+              <div class="content">
+                <div class="imgs">
+                  <% for(invent of inventoriesssssss) { %>
+                  <div style="margin-right: 20px;">
+                      <div>
+                          <img src="<%=invent.image[0].url %>" alt="">
+                      </div>
+                          <sub>
+                              <small>Category: Gadgets <span><%=invent.price %></span></small> <br>
+                              <small><a style="color: black; text-decoration:none" href="/list/<%=invent._id %>"> <%=invent.brand%> <%=invent.name%> </a></small>
+                         </sub>
+                  </div>
+                  <% } %>
+  
+                </div>
+              </div>
+              <div class="content">
+                <div class="imgs">
+                  <% for(invent of inventoriessssssss) { %>
+                  <div style="margin-right: 20px;">
+                      <div>
+                          <img src="<%=invent.image[0].url %>" alt="">
+                      </div>
+                          <sub>
+                              <small>Category: Gadgets <span><%=invent.price %></span></small> <br>
+                              <small><a style="color: black; text-decoration:none" href="/list/<%=invent._id %>"> <%=invent.brand%> <%=invent.name%> </a></small>
+                         </sub>
+                  </div>
+                  <% } %>
+
+  
+                </div>
+              </div>
+              <a href="#" id="loadMore">Load More</a>
+        </div>
+
+        <!-- <div class="imgs">
+            <div style="margin-right: 20px;">
+                <div>
+                    <img src="images/gadgets/Rectangle 187.png" alt="">
+                </div>
+                    <sub>
+                        <small>Category: Gadgets <span>N650,000</span></small> <br>
+                       <small>Apple Iphone 13 Pro</small>
+                   </sub>
+            </div>
+            <div style="margin-right: 20px;">
+                <div>
+                    <img src="images/gadgets/Rectangle 188.png" alt="">
+                </div>
+                    <sub>
+                        <small>Category: Gadgets <span>N105,000</span></small> <br>
+                       <small>JBL Charge 5</small>
+                   </sub>
+            </div>
+            <div>
+                <div>
+                    <img src="images/gadgets/Rectangle 189.png" alt="">
+                </div>
+                    <sub>
+                        <small>Category: Gadgets <span>N85,000</span></small> <br>
+                       <small>Beats Solo Pro</small>
+                   </sub>
+            </div>
+        </div>
+    </div>
+    <div class="content">
+        <div class="imgss">
+            <div style="margin-right: 20px;">
+                <div>
+                    <img src="images/gadgets/Rectangle 190.png" alt="">
+                </div>
+                    <sub>
+                        <small>Category: Gadgets <span>N340,000</span></small> <br>
+                       <small>Google Pixel 6</small>
+                   </sub>
+            </div>
+            <div style="margin-right: 20px;">
+                <div>
+                    <img src="images/gadgets/Rectangle 191.png" alt="">
+                </div>
+                    <sub>
+                        <small>Category: Gadgets <span>N240,000</span></small> <br>
+                       <small>Apple iPhone SE 2022</small>
+                   </sub>
+            </div>
+            <div>
+                <div>
+                    <img src="images/gadgets/Rectangle 192.png" alt="">
+                </div>
+                    <sub>
+                        <small>Category: Gadgets <span>N120,000</span></small> <br>
+                       <small>Apple Airpods Pro</small>
+                   </sub>
+            </div>
+        </div>
+        </div>
+        <div class="content">
+        <div class="imgss">
+            <div style="margin-right: 20px;">
+                <div>
+                    <img src="images/gadgets/Rectangle 193.png" alt="">
+                </div>
+                    <sub>
+                        <small>Category: Gadgets's <span>N270,000</span></small> <br>
+                       <small>Samsung Galaxy S21</small>
+                   </sub>
+            </div>
+            <div style="margin-right: 20px;">
+                <div>
+                    <img src="images/gadgets/Rectangle 194.png" alt="">
+                </div>
+                    <sub>
+                        <small>Category: Gadgets <span>N550,000</span></small> <br>
+                       <small>Apple Macbook Air 2020 </small>
+                   </sub>
+            </div>
+            <div>
+                <div>
+                    <img src="images/gadgets/Rectangle 195.png" alt="">
+                </div>
+                    <sub>
+                        <small>Category: Gadgets <span>N500,000</span></small> <br>
+                       <small>Apple iPhone 13</small>
+                   </sub>
+            </div>
+        </div>
+        </div>
+        <div class="content">
+        <div class="imgss">
+            <div style="margin-right: 20px;">
+                <div>
+                    <img src="images/gadgets/Rectangle 196.png" alt="">
+                </div>
+                    <sub>
+                        <small>Category: Gadgets <span>N320,000</span></small> <br>
+                       <small>Apple iPhone 12</small>
+                   </sub>
+            </div>
+            <div style="margin-right: 20px;">
+                <div>
+                    <img src="images/gadgets/Rectangle 197.png" alt="">
+                </div>
+                    <sub>
+                        <small>Category: Gadgets <span>N120,000</span></small> <br>
+                       <small>iWatch Series 7</small>
+                   </sub>
+            </div>
+            <div>
+                <div>
+                    <img src="images/gadgets/Rectangle 198.png" alt="">
+                </div>
+                    <sub>
+                        <small>Category: Gadgets <span>N107,000</span></small> <br>
+                       <small>Airpods Pro</small>
+                   </sub>
+            </div>
+        </div>
+        </div>
+        <div class="content">
+        <div class="imgss">
+            <div style="margin-right: 20px;">
+                <div>
+                    <img src="images/gadgets/Rectangle 199.png" alt="">
+                </div>
+                    <sub>
+                        <small>Category: Gadgets <span>N190,000</span></small> <br>
+                       <small>Apple iwatch Series 7</small>
+                   </sub>
+            </div>
+            <div style="margin-right: 20px;">
+                <div>
+                    <img src="images/gadgets/Rectangle 200.png" alt="">
+                </div>
+                    <sub>
+                        <small>Category: Gadgets <span>N850,000</span></small> <br>
+                       <small>Apple Macbook Air 2022 M2</small>
+                   </sub>
+            </div>
+            <div>
+                <div>
+                    <img src="images/gadgets/Rectangle 201.png" alt="">
+                </div>
+                    <sub>
+                        <small>Category: Gadgets<span>N450,000</span></small> <br>
+                       <small>Apple iPad Pro 2019</small>
+                   </sub>
+            </div>
+        </div>
+        </div>
+        <div class="content">
+        <div class="imgss">
+            <div style="margin-right: 20px;">
+                <div>
+                    <img src="images/gadgets/Rectangle 202.png" alt="">
+                </div>
+                    <sub>
+                        <small>Category: Gadgets <span>N510,000</span></small> <br>
+                       <small>Apple iPhone 12 Pro Max</small>
+                   </sub>
+            </div>
+            <div style="margin-right: 20px;">
+                <div>
+                    <img src="images/gadgets/Rectangle 203.png" alt="">
+                </div>
+                    <sub>
+                        <small>Category: Gadgets <span>N15,000</span></small> <br>
+                       <small>Apple Earphones</small>
+                   </sub>
+            </div>
+            <div>
+                <div>
+                    <img src="images/gadgets/Rectangle 204.png" alt="">
+                </div>
+                    <sub>
+                        <small>Category: Gadgets <span>N220,000</span></small> <br>
+                       <small> Samsung Galaxy S20</small>
+                   </sub>
+            </div>
+        </div>
+        </div>
+        <div class="content">
+        <div class="imgss">
+            <div style="margin-right: 20px;">
+                <div>
+                    <img src="images/gadgets/Rectangle 205.png" alt="">
+                </div>
+                    <sub>
+                        <small>Category: Gadgets <span>N200,000</span></small> <br>
+                       <small>Samsung Galaxy Note 20</small>
+                   </sub>
+            </div>
+            <div style="margin-right: 20px;">
+                <div>
+                    <img src="images/gadgets/Rectangle 206.png" alt="">
+                </div>
+                    <sub>
+                        <small>Category: Gadgets <span>N370,000</span></small> <br>
+                       <small>Apple iPhone 12</small>
+                   </sub>
+            </div>
+            <div>
+                <div>
+                    <img src="images/gadgets/Rectangle 207.png" alt="">
+                </div>
+                    <sub>
+                        <small>Category: Gadgets <span>N350,000</span></small> <br>
+                       <small>Dell XPS </small>
+                   </sub>
+            </div>
+        </div>
+        </div>
+        <div class="content">
+        <div class="imgss">
+            <div style="margin-right: 20px;">
+                <div>
+                    <img src="images/gadgets/Rectangle 211.png" alt="">
+                </div>
+                    <sub>
+                        <small>Category: Gadgets <span>N330,000</span></small> <br>
+                       <small>Samsung Galaxy S22</small>
+                   </sub>
+            </div>
+            <div style="margin-right: 20px;">
+                <div>
+                    <img src="images/gadgets/Rectangle 212.png" alt="">
+                </div>
+                    <sub>
+                        <small>Category: Gadgets<span>N355,000</span></small> <br>
+                       <small>Apple iPhone 11 Pro Max</small>
+                   </sub>
+            </div>
+            <div>
+                <div>
+                    <img src="images/gadgets/Rectangle 213.png" alt="">
+                </div>
+                    <sub>
+                        <small>Category: Gadgets <span>N165,000</span></small> <br>
+                       <small> Apple iPhone XR</small>
+                   </sub>
+            </div>
+            </div>
+            </div>
+            <div class="content">
+            <div class="imgss">
+                <div style="margin-right: 20px;">
+                    <div>
+                        <img src="images/gadgets/Rectangle 214.png" alt="">
+                    </div>
+                        <sub>
+                            <small>Category: Gadgets <span>N10,000</span></small> <br>
+                           <small>Type C Charger</small>
+                       </sub>
+                </div>
+                <div style="margin-right: 20px;">
+                    <div>
+                        <img src="images/gadgets/Rectangle 215.png" alt="">
+                    </div>
+                        <sub>
+                            <small>Category: Gadgets<span>500,000</span></small> <br>
+                           <small>Sony Play Station 5</small>
+                       </sub>
+                </div>
+                <div>
+                    <div>
+                        <img src="images/gadgets/Rectangle 216.png" alt="">
+                    </div>
+                        <sub>
+                            <small>Category: Gadgets <span>N45,000</span></small> <br>
+                           <small> JBL Clip 4</small>
+                       </sub>
+                </div>
+            </div>
+            </div>
+            <div class="content">
+            <div class="imgss">
+                <div style="margin-right: 20px;">
+                    <div>
+                        <img src="images/gadgets/Rectangle 217.png" alt="">
+                    </div>
+                        <sub>
+                            <small>Category: Gadgets <span>N450,000</span></small> <br>
+                           <small>Apple iPad Pro 2019</small>
+                       </sub>
+                </div>
+                <div style="margin-right: 20px;">
+                    <div>
+                        <img src="images/gadgets/Rectangle 218.png" alt="">
+                    </div>
+                        <sub>
+                            <small>Category: Gadgets<span>N120,000</span></small> <br>
+                           <small>Lenovo ThinkPad</small>
+                       </sub>
+                </div>
+                <div>
+                    <div>
+                        <img src="images/gadgets/Rectangle 219.png" alt="">
+                    </div>
+                        <sub>
+                            <small>Category: Gadgets <span>N1,050,000</span></small> <br>
+                           <small> Apple Macbook Pro 2022 M2</small>
+                       </sub>
+                </div>
+            </div>
+            </div>
+            <div class="content">
+            <div class="imgss">
+                <div style="margin-right: 20px;">
+                    <div>
+                        <img src="images/gadgets/Rectangle 220.png" alt="">
+                    </div>
+                        <sub>
+                            <small>Category: Gadgets <span>N90,000</span></small> <br>
+                           <small>Beats Studio Buds</small>
+                       </sub>
+                </div>
+                <div style="margin-right: 20px;">
+                    <div>
+                        <img src="images/gadgets/Rectangle 221.png" alt="">
+                    </div>
+                        <sub>
+                            <small>Category: Gadgets<span>N455,000</span></small> <br>
+                           <small>HP Envy</small>
+                       </sub>
+                </div>
+                <div>
+                    <div>
+                        <img src="images/gadgets/Rectangle 222.png" alt="">
+                    </div>
+                        <sub>
+                            <small>Category: Gadgets <span>N200,000</span></small> <br>
+                           <small> Apple iWatch Series 7 45Mm</small>
+                       </sub>
+                </div>
+            </div>
+            </div>
+            <div class="content">
+            <div class="imgss">
+                <div style="margin-right: 20px;">
+                    <div>
+                        <img src="images/gadgets/Rectangle 223.png" alt="">
+                    </div>
+                        <sub>
+                            <small>Category: Gadgets <span>N270,000</span></small> <br>
+                           <small>HP Elitebook</small>
+                       </sub>
+                </div>
+                <div style="margin-right: 20px;">
+                    <div>
+                        <img src="images/gadgets/Rectangle 224.png" alt="">
+                    </div>
+                        <sub>
+                            <small>Category: Gadgets<span>N355,000</span></small> <br>
+                           <small>One Plus 8</small>
+                       </sub>
+                </div>
+                <div>
+                    <div>
+                        <img src="images/gadgets/Rectangle 225.png" alt="">
+                    </div>
+                        <sub>
+                            <small>Category: Gadgets <span>N165,000</span></small> <br>
+                           <small> Apple iPhone X</small>
+                       </sub>
+                </div>
+            </div>
+            </div>
+            <div class="content">
+            <div class="imgss">
+                <div style="margin-right: 20px;">
+                    <div>
+                        <img src="images/gadgets/Rectangle 226.png" alt="">
+                    </div>
+                        <sub>
+                            <small>Category: Gadgets <span>N140,000</span></small> <br>
+                           <small>Samsung Galaxy Tab A</small>
+                       </sub>
+                </div>
+                <div style="margin-right: 20px;">
+                    <div>
+                        <img src="images/gadgets/Rectangle 227.png" alt="">
+                    </div>
+                        <sub>
+                            <small>Category: Gadgets<span>N950,000</span></small> <br>
+                           <small>Samsung Galaxy Fold 4</small>
+                       </sub>
+                </div>
+                <div>
+                    <div>
+                        <img src="images/gadgets/Rectangle 228.png" alt="">
+                    </div>
+                        <sub>
+                            <small>Category: Gadgets <span>N225,000</span></small> <br>
+                           <small> Samsung Galaxy Watch 4</small>
+                       </sub>
+                </div>
+        </div>
+        </div>
+        <div class="content">
+        <div class="imgss">
+            <div style="margin-right: 20px;">
+                <div>
+                    <img src="images/gadgets/Rectangle 229.png" alt="">
+                </div>
+                    <sub>
+                        <small>Category: Gadgets <span>N850,000</span></small> <br>
+                       <small>Samsung Galaxy Fold 4</small>
+                   </sub>
+            </div>
+            <div style="margin-right: 20px;">
+                <div>
+                    <img src="images/gadgets/Rectangle 230.png" alt="">
+                </div>
+                    <sub>
+                        <small>Category: Gadgets<span>N105,000</span></small> <br>
+                       <small>JBL Charge 5/small>
+                   </sub>
+            </div>
+            <div>
+                <div>
+                    <img src="images/gadgets/Rectangle 231.png" alt="">
+                </div>
+                    <sub>
+                        <small>Category: Gadgets <span>N85,000</span></small> <br>
+                       <small> Fitbit Versa 3</small>
+                   </sub>
+            </div>
+        </div>
+        </div>
+        <div class="content">
+        <div class="imgss">
+            <div style="margin-right: 20px;">
+                <div>
+                    <img src="images/gadgets/Rectangle 232.png" alt="">
+                </div>
+                    <sub>
+                        <small>Category: Gadgets <span>N950,000</span></small> <br>
+                       <small>Appe iPhone 14 Pro Max</small>
+                   </sub>
+            </div>
+            <div style="margin-right: 20px;">
+                <div>
+                    <img src="images/gadgets/Rectangle 233.png" alt="">
+                </div>
+                    <sub>
+                        <small>Category: Gadgets<span>N95,000</span></small> <br>
+                       <small>Samsung Galaxy Note 8</small>
+                   </sub>
+            </div>
+            <div>
+                <div>
+                    <img src="images/gadgets/Rectangle 234.png" alt="">
+                </div>
+                    <sub>
+                        <small>Category: Gadgets <span>N25,000</span></small> <br>
+                       <small> Apple AirTag Leather Hoop</small>
+                   </sub>
+            </div>
+        </div>
+        </div>
+        <div class="content">
+        <div class="imgss">
+            <div style="margin-right: 20px;">
+                <div>
+                    <img src="images/gadgets/Rectangle 235.png" alt="">
+                </div>
+                    <sub>
+                        <small>Category: Gadgets <span>N60,000</span></small> <br>
+                       <small>Sony PlayStation 5 Controller</small>
+                   </sub>
+            </div>
+            <div style="margin-right: 20px;">
+                <div>
+                    <img src="images/gadgets/Rectangle 236.png" alt="">
+                </div>
+                    <sub>
+                        <small>Category: Gadgets<span>N135,000</span></small> <br>
+                       <small>Beats Pill</small>
+                   </sub>
+            </div>
+            <div>
+                <div>
+                    <img src="images/gadgets/Rectangle 237.png" alt="">
+                </div>
+                    <sub>
+                        <small>Category: Gadgets <span>N15,000</span></small> <br>
+                       <small> Type C Charger</small>
+                   </sub>
+            </div>
+        </div>
+        </div>
+
+        <a href="#" id="loadMore">Load More</a>
+    </div> -->
+        <hr>
+
+        <!-- <div class="last-sec">
+            <h5>CURRENTLY DISPLAYING 1-21 OF 350 ITEMS</h5>
+            <button>LOAD MORE ITEMS</button>
+        </div> -->
+
+
+      </main>
+      <footer class="d-flex justify-content-between">
+        <div class="logo-footer">
+            <b>RUQ</b>
+                <p>Balling on a budget</p>
+        </div>
+        <div class="fix-three">
+            <h6> <b>INFORMATION</b></h6>
+            <ul>
+                <li>MY ACCOUNT</li>
+                <li>DELIVERY INFORMATION</li>
+                <li>SIZE GUIDE</li>
+                <li>RETURNS</li>
+                <li>FAQ'S</li>
+            </ul>
+        </div>
+        <div class="fix-two">
+            <h6> <b>ABOUT RUQ</b></h6>
+            <ul>
+                <li>ABOUT US</li>
+                <li>CONTACT US</li>
+                <li>CAREERS</li>
+                <li>DONATE FOR A DISCOUNT</li>
+                <li>SUSTAINABLITY</li>
+            </ul>
+        </div>
+        <div class="fix-one">
+            <h6> <b>RESOURCES</b></h6>
+            <ul>
+                <li>BLOG</li>
+                <li>HELP AND SUPPORT</li>
+                <li>REVIEWS</li>
+                <li>FEATURES</li>
+                <li>PRODUCTS</li>
+            </ul>
+        </div>
+        <div class="paragraph">
+            <div class="pa">
+            <p>Sign up for our newsletter, don't miss out on our </p> <br>
+            <p> new product drops or exclusive offers <p>
+            </div>
+                <div class="last input-group mb-3">
+                    <input type="text" class="form-control" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                    <span class="input-group-text" id="basic-addon2">Subscribe</span>
+                  </div>
+        </div>
+        
+    </footer>
+    <script src="/javascripts/scroll.js"></script>
+</body>
+</html>

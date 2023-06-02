@@ -1,0 +1,10 @@
+<% if(inventories){ %>
+    <% for(invent of inventories) { %>
+       Item: <%=invent.item.name %> <br>
+       Price: <%=invent.price %> <br>
+       Quantity: <%=invent.qty %> <br>
+       Total: $<%=totalPrice %>
+        <% } %>
+<% }else { %>
+    <h2>Empty Cart</h2>
+    <% } %>

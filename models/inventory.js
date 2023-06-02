@@ -7,7 +7,7 @@ const ShopSchema = new Schema ({
     category: {
         type: String,
         required: true,
-        enum:['Electronics', 'Gadgets', 'Clothing', 'Automobile', 'Furniture', 'Food'],
+        enum:['Electronics', 'Gadgets', 'Fashion', 'Automobile', 'Furniture'],
     },
     brand: {
         type: String,
@@ -41,8 +41,10 @@ const ShopSchema = new Schema ({
             filename: String
         }
     ],
-
-});
+}, {
+timestamps: { createdAt: 'created_at', updatedAt: 'updated_at' }
+}
+);
 
 
 

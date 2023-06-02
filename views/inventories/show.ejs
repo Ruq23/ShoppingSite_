@@ -19,10 +19,9 @@
 
                 <div class="card-body">
                     <a class="card-link btn btn-warning" href="/list/<%=inventory._id%>/edit ">Edit</a>
-                    <a class="card-link btn btn-success" href="/add-to-cart/ ">Add to cart</a>
-                    <form class="d-inline" action="/list/<%=inventory._id%>?_method=DELETE" method="POST">
-                        <button class="btn btn-danger">DELETE</button>
-                    </form>
+                    <!-- <a class="card-link btn btn-success" href="/add-to-cart/ ">Add to cart</a> -->
+                    <a href="/cart/add-to-cart/<%=inventory._id%>" class="btn btn-raised btn-success pull-right"> Add to cart </a>
+                    
                 </div>
 
 

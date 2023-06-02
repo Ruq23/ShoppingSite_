@@ -1,7 +1,7 @@
 const Inventory = require('../models/inventory');
 const { cloudinary } = require('../cloudinary')
 
-const categories = ['Electronics', 'Gadgets', 'Clothing', 'Automobile', 'Furniture', 'Food']
+const categories = ['Electronics', 'Gadgets', 'Fashion', 'Automobile', 'Furniture', 'Food']
 
 module.exports.index = async (req, res) => {
     const iventories = await Inventory.find({});

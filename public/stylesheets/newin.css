@@ -1,0 +1,258 @@
+/* HEADER AND FOOTER */
+
+.d-flex i {
+    padding-right: 32px;
+}
+
+
+footer {
+    padding-top: 7%;
+    padding-left: 35px;
+    padding-right: 35px;
+    padding-bottom: 50px;
+    /* background: #9aa9a7; */
+    background-color: #9aa9a7;
+    position: relative;
+    top: 0px;
+    font-family: 'Open Sans', sans-serif;
+
+}
+
+/* FOOTER */
+footer ul {
+   list-style: none;
+   margin-left: -15%;
+   font-size: 13px;
+}
+
+.fix-one ul {
+   margin-left: -20%;
+}
+
+.fix-two ul {
+    margin-left: -17%;
+ }
+
+ .fix-three ul {
+    margin-left: -18%;
+ }
+
+footer li {
+   margin-bottom: 10px;
+ }
+
+footer h6 {
+  margin-bottom: 15%;
+ }
+
+.paragraph p {
+    font-family: 'Open Sans', sans-serif;
+    margin-bottom: -20px;
+ }
+
+ .pa{
+    font-family: 'Open Sans', sans-serif;
+    margin-bottom: 40px;
+ }
+
+ .logo-footer {
+    position: relative;
+    top: 50px;
+ }
+
+ .logo-footer b {
+   font-size: x-large;
+   font-weight: 900;
+ }
+
+ nav {
+    color: black;
+    background-color: #9aa9a7;
+ }
+
+
+ #basic-addon2{
+    background-color: #716565;
+    color: #FFFFFF;
+    border: 1px #9aa9a7;
+    border-radius: 1px 7px 7px 1px;
+    font-family: 'Open Sans', sans-serif;
+ }
+
+ .last input{
+    border-radius: 10px 10px;
+    padding: 13px;
+    font-family: 'Open Sans', sans-serif;
+
+ }
+
+
+/* HEADER AND FOOTER */
+
+body{
+    overflow-x: hidden;
+}
+.nunu li {
+    list-style: none;
+    padding-bottom: 26px;
+}
+.nunu a {
+    color: black;
+}
+
+
+
+.nunu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.ni-one h4 {
+    text-align: center;
+    padding-top: 60px;
+}
+
+.ni-one p {
+    text-align: left;
+    padding-top: 20px;
+    word-spacing: 5px;
+    line-height: 30px;
+    padding-left: 10px;
+    padding-right: 20px;
+    padding-bottom: 15px;
+}
+
+.ni-one {
+    margin-top: 10px;
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-bottom: 50px;
+    background-color: #9aa9a7;
+    padding-bottom: 40px;
+}
+
+.nununu h6{
+    display: inline;
+}
+
+.nununu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-right: 40px;
+    margin-left: 40px;
+}
+
+.imgs img{
+    width: 440px;
+    height: 500px;
+    margin-top: 25px;
+
+}
+
+.imgs {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-right: 70px;
+    margin-left: -30px;
+    margin-bottom: 80px;
+    
+}
+
+.imgs span {
+    position: absolute;
+    left: 300px;
+    top: 6px;
+}
+
+.imgss {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-right: 40px;
+    margin-left: -30px;
+    margin-bottom: 80px;
+}
+
+
+.imgss img{
+    width: 440px;
+    height: 500px;
+    margin-top: 25px;
+
+}
+
+.imgss span {
+    position: absolute;
+    left: 300px;
+    top: 6px;
+}
+
+hr {
+    width: 70%;
+    position: relative;
+    left: 250px;
+}
+
+.last-sec h5 {
+    text-align: center;
+    margin-top: 80px;
+}
+
+.last-sec button {
+   margin-left: 330px;
+   margin-top: 40px;
+   padding: 10px 310px;
+   margin-bottom: 60px;
+   background-color: #9aa9a7;
+   color: white;
+   border: 1px solid #9aa9a7;
+}
+
+.numero {
+    position: relative;
+    left: 31px;
+    margin-bottom: 25px;
+}
+
+/* TEST */
+  .content {
+    /* height: 100px;
+    width: 45%;
+    color: #fff;
+    font-size: 24px; */
+    /* line-height: 100px; centering text just for view */
+    /* text-align: center;
+    background-color: grey;
+    margin: 5px;
+    border: 1px solid lightgrey; */
+    display: none;
+    
+  }
+  #loadMore {
+    margin-left: 330px;
+    margin-top: 40px;
+    padding: 10px 310px;
+    margin-bottom: 60px;
+    background-color: #9aa9a7;
+    color: white;
+    border: 1px solid #9aa9a7;
+    transition: 0.3s;
+  }
+  #loadMore:hover {
+    color: #9aa9a7;
+    background-color: #fff;
+    border: 1px solid #9aa9a7;
+    text-decoration: none;
+  }
+  .noContent {
+    color: #000 !important;
+    background-color: transparent !important;
+    pointer-events: none;
+  }
+  
+   h5:hover {
+    text-decoration: underline;
+  }
