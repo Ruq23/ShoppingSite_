@@ -147,7 +147,7 @@ app.get('/gadgets', catchAsync(async(req, res) => {
     // const inventoriessss = await Inventory.find({ category: 'Gadgets', brand: brand}).skip(12).limit(3)
     // const inventoriesssss = await Inventory.find({ category: 'Gadgets', brand: brand}).skip(15).limit(3)
     // console.log(inventories)
-    res.render('inventories/gadgetsfilter', { inventories, inventoriess, inventoriesss,  })
+    res.render('inventories/gadgetsfilter', { inventories, inventoriess, inventoriesss, brand  })
     }else {
     const inventoryAll = await Inventory.find({})
     const inventories = await Inventory.find({ category: 'Gadgets'}).limit(3)
