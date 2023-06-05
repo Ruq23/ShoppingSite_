@@ -1,0 +1,269 @@
+*{
+    font-family: 'Open Sans', sans-serif;
+}
+
+.full {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: -175px;
+
+}
+
+.box {
+    width: 200%;
+    height: 60%;
+    margin-right: 0px;
+    margin-top: 65px;
+    background-color: #FFFFFF;;
+
+    /* width: 50%; */
+    /* height: 60%; */
+    display: flex;
+    flex-direction: row;
+    /* margin-left: 50%; */
+    /* background-image: url(image3.png);
+    background-size: cover; */
+}
+
+.d-flex i {
+    padding-right: 32px;
+}
+
+
+
+.text-one {
+    text-align: center;
+    width: 85%;
+    margin-bottom: 50px;
+}
+.text-one h3 {
+    padding-bottom: 13px;
+}
+.text-one h5 {
+    font-size: small;
+}
+
+/* .text-one h3 {
+    font-size: small;
+} */
+
+.text-one i {
+    font-size: 35px;
+    /* color: white; */
+    margin: 25px 67px;
+    margin-bottom: 8px;
+    margin-top: 45px;
+    border: 2px solid black;
+    border-radius: 30px;
+    padding: 13px;
+
+}
+
+.text-one b{
+    font-size: 15px;
+    margin: 25px 45px;
+    /* font-family: 'Open Sans', sans-serif; */
+}
+
+.b-one {
+    position: relative;
+    left: 25px;
+}
+
+.b-two {
+    position: relative;
+    left: 27px;
+}
+
+
+/* .input-control {
+    display: flex;
+    flex-direction: column;
+    width: 95%;
+    height: 80px;
+} */
+
+.input-control {
+    display: flex;
+    flex-direction: column;
+    width: 700px;
+    height: 80px;
+    margin-right: 30px;
+}
+
+
+.input-control input {
+    height: 80%;
+    border-radius: 9px;
+}
+
+label {
+    margin-bottom: 5px;
+    font-size: small;
+}
+
+
+.text-two {
+    text-align: center;
+    width: 100%;
+    margin-bottom: 50px;
+}
+
+.sign-in {
+    border: 1px solid;
+    margin-top: 70px;
+    /* width: 700px; */
+    /* height: 60px; */
+    padding: 20px 300px;
+    margin-right: 30px;
+    background-color: #716565;
+    color: #FFFFFF;
+}
+
+/* .text-two button {
+    margin-top: 25px;
+    width: 90%;
+    height: 60px;
+    margin-left: -10%;
+    padding: 9px;
+    background-color: #9aa9a7;
+} */
+.sign-up {
+    margin-top: 25px;
+    width: 700px;
+    height: 60px;
+    padding: 9px;
+    margin-right: 30px;
+    background-color: #C2CBCA;
+}
+
+
+
+.text-two h5 {
+    /* padding-bottom: 30px; */
+    padding-top: 25px;
+    text-align: center;
+    margin-top: 30px;
+}
+.text-two p {
+    /* width: 80%;
+    margin-top: 10px;
+    margin-bottom: 30px; */
+    text-align: center;
+    margin-bottom: 50px;
+    margin-top: 20px;
+    font-size: small;
+}
+
+.text-two hr {
+    width: 100%;
+}
+
+.red {
+    color: #C2CBCA;
+}
+
+hr {
+    width: 83%;
+}
+
+.text-two h3 {
+  text-align: center;
+  margin-left: -15%;
+  margin-top: 7%;
+}
+
+footer {
+    padding-top: 7%;
+    padding-left: 35px;
+    padding-right: 35px;
+    padding-bottom: 50px;
+    /* background: #9aa9a7; */
+    background-color: #9aa9a7;
+    position: relative;
+    top: 0px;
+    font-family: 'Open Sans', sans-serif;
+
+}
+
+/* FOOTER */
+footer ul {
+   list-style: none;
+   margin-left: -15%;
+   font-size: 13px;
+}
+
+.fix-one ul {
+   margin-left: -20%;
+}
+
+.fix-two ul {
+    margin-left: -17%;
+ }
+
+ .fix-three ul {
+    margin-left: -18%;
+ }
+ 
+
+ 
+
+footer li {
+   margin-bottom: 10px;
+ }
+
+footer h6 {
+  margin-bottom: 15%;
+ }
+
+.paragraph p {
+    font-family: 'Open Sans', sans-serif;
+    margin-bottom: -20px;
+ }
+
+ .pa{
+    font-family: 'Open Sans', sans-serif;
+    margin-bottom: 40px;
+ }
+
+ .logo-footer {
+    position: relative;
+    top: 50px;
+ }
+
+ .logo-footer b {
+   font-size: x-large;
+   font-weight: 900;
+ }
+
+ nav {
+    color: black;
+    background-color: #9aa9a7;
+ }
+
+
+ .image3 {
+    width: 90%;
+    height: 90%;
+    margin-top: -48px;
+
+ }
+
+ #basic-addon2{
+    background-color: #716565;
+    color: #FFFFFF;
+    border: 1px #9aa9a7;
+    border-radius: 1px 7px 7px 1px;
+    font-family: 'Open Sans', sans-serif;
+ }
+
+ .last input{
+    border-radius: 10px 10px;
+    padding: 13px;
+    font-family: 'Open Sans', sans-serif;
+
+ }
+.last{
+    margin-bottom: 60px;
+}

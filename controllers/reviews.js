@@ -11,7 +11,7 @@ module.exports.newReview =  async(req, res) => {
     await review.save()
     await inventory.save()
     req.flash('success', 'Created a new review for this product')
-    res.redirect(`/list/${inventory._id}`)
+    res.redirect(`/list/${inventory._id}/reviews`)
 }
 
 module.exports.destroyReview = async (req, res) => {

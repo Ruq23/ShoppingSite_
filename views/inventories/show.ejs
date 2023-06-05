@@ -18,7 +18,9 @@
                 </ul>
 
                 <div class="card-body">
+                <% if(currentUser) { %> 
                     <a class="card-link btn btn-warning" href="/list/<%=inventory._id%>/edit ">Edit</a>
+                    <% } %>
                     <!-- <a class="card-link btn btn-success" href="/add-to-cart/ ">Add to cart</a> -->
                     <a href="/cart/add-to-cart/<%=inventory._id%>" class="btn btn-raised btn-success pull-right"> Add to cart </a>
                     
@@ -74,7 +76,7 @@
               <% for (let review of inventory.reviews) { %> 
                 <div class="card mb-3">
               <div class="mb-3 card-body">
-                <h5 class="card-title"><%=review.author.username%></h5>
+                <h5 class="card-title"><%=review.name%></h5>
                 <p class="starability-result" data-rating="<%=review.rating%>">
                   Rated: <%=review.rating%> stars
                 </p>
@@ -91,5 +93,5 @@
     </div>
 
     <footer class="mb-3 col-6 offset-3">
-        <a href="/list"> All Products</a>
+        <a href="/list/<%=inventory._id%>"> Back to Product</a>
     </footer>

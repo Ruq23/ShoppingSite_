@@ -2,7 +2,7 @@ const User = require('../models/user');
 
 
 module.exports.registerForm =  (req, res) => {
-    res.render('users/register')
+    res.render('users/register_')
 }
 
 module.exports.register = async(req, res, next) => {
@@ -14,7 +14,7 @@ module.exports.register = async(req, res, next) => {
         if(err) return next(err);
         console.log(registeredUser)
         req.flash('success', 'Welcome to RuqThePlug!')
-        res.redirect('/list')
+        res.redirect('/')
     })
     } catch(e) {
         req.flash('error', e.message)
@@ -23,12 +23,12 @@ module.exports.register = async(req, res, next) => {
 }
 
 module.exports.loginForm =  (req, res) => {
-    res.render('users/login')
+    res.render('users/login_')
 }
 
 module.exports.login =  (req, res) => {
     req.flash('success', 'Welcome Back!')
-    const redirectUrl = req.session.returnTo || '/list'
+    const redirectUrl = req.session.returnTo || '/'
     res.redirect(redirectUrl)
 }
 
@@ -36,7 +36,7 @@ module.exports.logout = (req, res, next) => {
     req.logout(req.user, err => {
         if(err) return next(err);
     req.flash('success', 'Goodbye!, Hope to see you soon!')
-    res.redirect('/list')
+    res.redirect('/')
     })
 }
 

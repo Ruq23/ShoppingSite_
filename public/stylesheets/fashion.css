@@ -1,4 +1,7 @@
 /* HEADER AND FOOTER */
+*{
+  font-family: 'Open Sans', sans-serif;
+}
 
 .d-flex i {
     padding-right: 32px;

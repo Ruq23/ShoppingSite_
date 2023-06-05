@@ -27,6 +27,8 @@ router.route('/:id')
 
 router.get('/:id/edit',isLoggedIn, isAuthor, catchAsync(inventories.editProductForm))
 
+router.get('/:id/reviews', catchAsync(inventories.showProductReviews))
+
 
 
 module.exports = router;

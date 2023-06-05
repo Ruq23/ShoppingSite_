@@ -29,6 +29,8 @@ const LocalStrategy = require('passport-local');
 const flash = require('connect-flash');
 const { isAuthor } = require('./middleware.js');
 const cart = require('./models/cart.js');
+const port = process.env.PORT || 3000;
+
 // const mongoStore = require('connect-mongo')(session);
 
 
@@ -37,7 +39,7 @@ const cart = require('./models/cart.js');
 //     useUnifiedTopology: true
 // });
 
-mongoose.connect(process.env.MONGODB_URI, {
+mongoose.connect('mongodb://mongo:vhwFwpXbFqED2wvouJam@containers-us-west-28.railway.app:6624', {
     useNewUrlParser: true,
     useUnifiedTopology: true
 });
@@ -294,6 +296,6 @@ app.use((err, req, res, next) => {
     // res.status(statusCode).send('Error')
 })
 
-app.listen(3000, () => {
+app.listen(port, "0.0.0.0", () => {
     console.log('Serving on port 3000')
 })

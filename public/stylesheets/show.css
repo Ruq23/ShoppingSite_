@@ -1,0 +1,231 @@
+/* HEADER AND FOOTER */
+*{
+    font-family: 'Open Sans', sans-serif;
+}
+
+.d-flex i {
+    padding-right: 32px;
+}
+
+
+footer {
+    padding-top: 7%;
+    padding-left: 35px;
+    padding-right: 35px;
+    padding-bottom: 50px;
+    /* background: #9aa9a7; */
+    background-color: #9aa9a7;
+    position: relative;
+    top: 0px;
+    font-family: 'Open Sans', sans-serif;
+
+}
+
+/* FOOTER */
+footer ul {
+   list-style: none;
+   margin-left: -15%;
+   font-size: 13px;
+}
+
+.fix-one ul {
+   margin-left: -20%;
+}
+
+.fix-two ul {
+    margin-left: -17%;
+ }
+
+ .fix-three ul {
+    margin-left: -18%;
+ }
+
+footer li {
+   margin-bottom: 10px;
+ }
+
+footer h6 {
+  margin-bottom: 15%;
+ }
+
+.paragraph p {
+    font-family: 'Open Sans', sans-serif;
+    margin-bottom: -20px;
+ }
+
+ .pa{
+    font-family: 'Open Sans', sans-serif;
+    margin-bottom: 40px;
+ }
+
+ .logo-footer {
+    position: relative;
+    top: 50px;
+ }
+
+ .logo-footer b {
+   font-size: x-large;
+   font-weight: 900;
+ }
+
+ nav {
+    color: black;
+    background-color: #9aa9a7;
+ }
+
+
+ #basic-addon2{
+    background-color: #716565;
+    color: #FFFFFF;
+    border: 1px #9aa9a7;
+    border-radius: 1px 7px 7px 1px;
+    font-family: 'Open Sans', sans-serif;
+ }
+
+ .last input{
+    border-radius: 10px 10px;
+    padding: 13px;
+    font-family: 'Open Sans', sans-serif;
+
+ }
+
+
+ .imgss {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-right: 40px;
+    margin-left: 40px;
+    margin-bottom: 80px;
+}
+
+.imgss img{
+    width: 440px;
+    height: 500px;
+    margin-top: 25px;
+
+}
+
+.imgss span {
+    position: absolute;
+    left: 390px;
+    top: 6px;
+}
+
+ img {
+    width: 440px;
+    height: 500px;
+    margin-top: 25px;
+}
+
+.nunew {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-right: 40px;
+    margin-left: 40px;
+    margin-bottom: -300px;
+}
+
+.nunew h6 {
+    margin-top: 40px;
+}
+
+.nunewone  {
+    width: 200px;
+    height: 200px;
+    margin-top: 25px;
+}
+
+.nunewtwo  {
+    width: 200px;
+    height: 200px;
+    margin-top: 25px;
+    position: relative;
+    top: 450px;
+    right: 205px;
+}
+
+.nunewthree  {
+    width: 200px;
+    height: 200px;
+    margin-top: 25px;
+}
+
+.nunewfour  {
+    width: 450px;
+    height: 650px;
+    margin-top: 25px;
+    position: relative;
+    left: 230px;
+    bottom: 450px;
+}
+
+.nuone {
+    padding-right: 300px;
+}
+
+.nutwo {
+    margin-top: 40px;
+    width: 70%;
+}
+
+.nutwo h5 {
+    margin-bottom: 20px;
+}
+
+.nutwo h6 {
+    margin-bottom: 20px;
+}
+
+.nutton button {
+    border: 1px solid white;
+    border-radius: 100px;
+    padding: 13px 15px;
+    margin-bottom: 40px;
+    margin-right: 20px;
+}
+
+.nutton1 {
+    margin-bottom: 30px;
+}
+
+.nutton1 button:nth-child(1) {
+    border: 1px solid;
+    padding: 13px 120px;
+    background-color: black;
+    color: white;
+    font-size: large;
+}
+
+/* .nutton1 button:nth-child(2) {
+    border: 1px solid;
+    padding: 13px 8px;
+    margin-left: 10px;
+    background-color: #9aa9a7;
+} */
+
+.nutton1 a {
+    border: 1px solid;
+    padding: 13px 30px;
+
+    background-color: #9aa9a7;
+}
+
+.numero {
+    position: absolute;
+    left: 40px;
+}
+
+.uno {
+    display: inline;
+    position: absolute;
+    left: 350px;
+}
+
+.unos {
+    display: inline;
+    position: absolute;
+    left: 720px;
+    color: grey;
+}

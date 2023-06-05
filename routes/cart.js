@@ -35,7 +35,8 @@ router.get('/cart/add-to-cart/:id', async(req, res) => {
         cart.add(inventory, inventory.id);
         req.session.cart = cart;
         console.log(req.session.cart);
-        res.redirect('/list');
+        req.flash('success', 'Item added to Cart')
+        res.redirect(`/list/${inventory._id}`);
     })
 });
 
@@ -60,7 +61,7 @@ router.get('/cart', function (req, res, next) {
         return res.render('cart', {inventories: null});
     }
     const cart = new Cart(req.session.cart);
-    return res.render('cart', {inventories: cart.generateArray(), totalPrice: cart.totalPrice});
+    return res.render('cart_', {inventories: cart.generateArray(), totalPrice: cart.totalPrice});
 });
 
 module.exports = router;

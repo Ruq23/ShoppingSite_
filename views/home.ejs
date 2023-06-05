@@ -34,30 +34,20 @@
               <li class="nav-item">
                 <a class="nav-link active pe-5" href="#">Electronics</a>
               </li>
-              <!-- <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Category
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li><a class="dropdown-item" href="#">Action</a></li>
-                  <li><a class="dropdown-item" href="#">Another action</a></li>
-                  <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="#">Something else here</a></li>
-                </ul>
-              </li> -->
-              <!-- <li class="nav-item">
-                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-              </li> -->
             </ul>
         </div>
 
-            <form class="d-flex">
-                <i class="fa fa-search" aria-hidden="true"></i>
-                <i class="fa fa-user" aria-hidden="true"></i>
-                <i class="fa fa-shopping-bag" aria-hidden="true"></i>
-              <!-- <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-              <button class="btn btn-outline-success" type="submit">Search</button> -->
-            </form>
+        <form class="d-flex">
+            <% if(currentUser) {%>
+                <a style="color: black;" href=""> <i class="fa fa-search" aria-hidden="true"></i></a>
+                <a style="color: black;" href="/cart"> <i class="fa fa-shopping-bag" aria-hidden="true"></i> </a>
+                <% }else { %>
+                    <a style="color: black;" href=""> <i class="fa fa-search" aria-hidden="true"></i></a>
+                    <a style="color: black;" href="/cart"> <i class="fa fa-shopping-bag" aria-hidden="true"></i> </a>
+                     <a style="color: black;" href="/login"> <i class="fa fa-user" aria-hidden="true"></i> </a>
+                <% } %>
+
+         </form>
           </div>
         </div>
       </nav>
@@ -66,7 +56,7 @@
             <h1>NEW SEASON IS LAUNCHING!</h1>
             <h2>With 20% off our sneaker collection</h2>
             <p>Welcome to our new arrivals page, where you'll find the hottest and most sought-after products in the market. Stay on top of the latest trends and be the first to own the newest and most innovative items. From fashion and beauty to electronics and home decor, our new arrivals page is regularly updated with exciting products. Discover fresh styles, cutting-edge gadgets, and must-have accessories that will elevate your lifestyle. With our carefully curated selection, shopping for the latest arrivals has never been easier. Explore our new arrivals page and embrace the thrill of staying ahead of the curve.</p>
-            <button>SHOP NOW</button>
+            <button><a style="text-decoration: none; color: black;" href="/newin">SHOP NOW</a></button>
             <button>ADD TO WISHLIST</button>
         </div>
         <div class="hero-two">
@@ -85,7 +75,7 @@
             <h6>Satisfy All Your Tech Needs</h6>
             <p>
                 Discover the ultimate tech companions! Explore a wide range of cutting-edge gadgets that elevate your lifestyle, from smartwatches to wireless headphones. Upgrade your world today and stay ahead of the curve.</p>
-            <button>SHOP NOW</button>
+            <button><a style="text-decoration: none; color: black;" href="gadgets">SHOP NOW</a></button>
 
         </div>
         <div class="hero-four">

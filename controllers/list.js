@@ -32,9 +32,25 @@ module.exports.showProduct = async (req, res) => {
         }
     }).populate('author');
     console.log(inventory)
+    const inventories = await Inventory.aggregate([ { $sample: {size: 3} }]) 
     if(!inventory){
         req.flash('error', 'Cannot find that product!');
-        return res.redirect('/list')
+        return res.redirect('/')
+    }
+    res.render('inventories/show_', { inventory, inventories })
+  }
+
+  module.exports.showProductReviews = async (req, res) => {
+    const inventory = await Inventory.findById(req.params.id).populate({
+        path: 'reviews',
+        populate: { 
+            path: 'author',
+        }
+    }).populate('author');
+    console.log(inventory)
+    if(!inventory){
+        req.flash('error', 'Cannot find that product!');
+        return res.redirect('/')
     }
     res.render('inventories/show', { inventory })
   }
@@ -43,7 +59,7 @@ module.exports.editProductForm = async (req, res) => {
     const inventory = await Inventory.findById(req.params.id)
     if (!inventory) {
         req.flash('error', 'Cannot find that Product')
-        return redirect ('/list')
+        return redirect ('/')
     }
     res.render('inventories/edit', { inventory, categories })
   }
@@ -62,7 +78,7 @@ module.exports.editProduct = async(req, res) => {
 //    console.log(req.body.inventory)
    if(!inventory){
     req.flash('error', 'Cannot find that product!');
-    return res.redirect('/list')
+    return res.redirect('/')
    }
    req.flash('success', 'Sucessfully Updated a Product!');
    res.redirect(`/list/${inventory._id}`)
@@ -72,6 +88,6 @@ module.exports.destroy = async(req, res) => {
     const { id } = req.params;
     await Inventory.findByIdAndDelete(id);
    req.flash('success', 'Product Deleted!');
-    res.redirect('/list');
+    res.redirect('/');
 }
 

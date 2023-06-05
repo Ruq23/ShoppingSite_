@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/styles.css">
+    <link rel="stylesheet" href="/stylesheets/register.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light mb-5 pt-4 pb-4">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="/"><b>RUQ</b></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse offset-1" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active pe-5" aria-current="page" href="newin">New In</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active pe-5" href="fashion">Fashion</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active pe-5" href="gadgets">Gadgets</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active pe-5" href="">Furniture</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active pe-5" href="#">Electronics</a>
+              </li>
+            </ul>
+        </div>
+
+        <form class="d-flex">
+            <a style="color: black;" href=""> <i class="fa fa-search" aria-hidden="true"></i></a>
+            <a style="color: black;" href="/login"> <i class="fa fa-user" aria-hidden="true"></i> </a>
+            <a style="color: black;" href="/cart"> <i class="fa fa-shopping-bag" aria-hidden="true"></i> </a>
+         </form>
+          </div>
+        </div>
+      </nav>
+      <% if(success && success.length) { %> 
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+            <%= success %> 
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+          </div>
+        <% } %> 
+    
+        <% if(error && error.length) { %> 
+            <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                <%= error %> 
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+              </div>
+            <% } %> 
+      <main class="full">
+        <div>
+            <img class="image3" src="/images/image3.png" alt="">
+        </div>
+        <div class="box">
+              <form class="form" action="/register" method="POST" class="validated-form" novalidate>
+                <div class="text-one">
+                    <h3>CREATE ACCOUNT</h3>
+                    <h5>Sign up to checkout faster, create your wishlists, track your orders and many more!</h5>
+                    <i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                    <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                    <i class="fa fa-truck" aria-hidden="true"></i>
+                    <div>
+                    <b class="b-one">WISHLIST</b>
+                    <b class="b-two">FASTER CHECKOUT</b>
+                    <b class="b-three">TRACK ORDERS</b>
+                </div>
+                </div>  
+
+                <label for="username">Username</label>
+                  <div class="input-control">
+                  <input type="text" name="username" id="username" required>
+                  <!-- <i class="fas fa-exclamation-circle"></i> -->
+                  <span class="error"></span>
+                  </div>  
+
+              <label for="pwd">Password</label>
+              <div class="input-control">
+                  <input type="password" id="password" name="password">
+                  <!-- <i class="fas fa-exclamation-circle"></i> -->
+                  <span class="error"></span>
+              </div>
+              <div class="text-two">
+                  <button class="sign-up">SIGN UP</button>
+                  <p>By signing up you agree to our <span class="red"> Terms & Conditions</span>. You can unsubscribe at any time you wish.</p>
+                  <hr>
+                  <h5 style="margin-bottom: 40px;">ALREADY HAVE AN ACCOUNT?</h5>
+                    <a class="sign-in" style="text-decoration: none; color: white;" href="/login">SIGN IN</a>
+                </div>
+              </form>
+</div>
+</main>
+
+<footer class="d-flex justify-content-between">
+    <div class="logo-footer">
+        <b>RUQ</b>
+            <p>Balling on a budget</p>
+    </div>
+    <div class="fix-three">
+        <h6> <b>INFORMATION</b></h6>
+        <ul>
+            <li>MY ACCOUNT</li>
+            <li>DELIVERY INFORMATION</li>
+            <li>SIZE GUIDE</li>
+            <li>RETURNS</li>
+            <li>FAQ'S</li>
+        </ul>
+    </div>
+    <div class="fix-two">
+        <h6> <b>ABOUT RUQ</b></h6>
+        <ul>
+            <li>ABOUT US</li>
+            <li>CONTACT US</li>
+            <li>CAREERS</li>
+            <li>DONATE FOR A DISCOUNT</li>
+            <li>SUSTAINABLITY</li>
+        </ul>
+    </div>
+    <div class="fix-one">
+        <h6> <b>RESOURCES</b></h6>
+        <ul>
+            <li>BLOG</li>
+            <li>HELP AND SUPPORT</li>
+            <li>REVIEWS</li>
+            <li>FEATURES</li>
+            <li>PRODUCTS</li>
+        </ul>
+    </div>
+    <div class="paragraph">
+        <div class="pa">
+        <p>Sign up for our newsletter, don't miss out on our </p> <br>
+        <p> new product drops or exclusive offers <p>
+        </div>
+            <div class="last input-group mb-3">
+                <input type="text" class="form-control" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                <span class="input-group-text" id="basic-addon2">Subscribe</span>
+              </div>
+    </div>
+</footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+</html>
