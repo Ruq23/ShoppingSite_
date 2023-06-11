@@ -91,7 +91,7 @@ footer h6 {
 
 
  .imgss {
-    display: flex;
+    display: none;
     flex-direction: row;
     justify-content: space-between;
     margin-right: 40px;
@@ -228,4 +228,209 @@ footer h6 {
     position: absolute;
     left: 720px;
     color: grey;
+}
+
+
+@media screen and (max-width: 480px) {
+     body{
+        max-width: 100%;
+     }
+
+     .nunew {
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        /* justify-content: space-between; */
+        margin-right: 40px;
+        margin-left: 40px;
+        margin-bottom: -300px;
+    }
+    
+    .nunew h6 {
+        margin-top: 40px;
+    }
+
+    .nunew p {
+        margin-bottom: -40px;
+    }
+    
+    .nunewone  {
+        width: 250px;
+        height: 300px;
+        margin-top: 25px;
+    }
+    
+    .nunewtwo  {
+       display: none;
+    }
+    
+    .nunewthree  {
+        display: none;
+    }
+    
+    .nunewfour  {
+       display: none;
+    }
+    
+    .nuone {
+        padding-right: 300px;
+    }
+    
+    .nutwo {
+        margin-top: 20px;
+        width: 70%;
+    }
+    
+    .nutwo h5 {
+        margin-bottom: -30px;
+    }
+    
+    .nutwo h6 {
+        margin-bottom: 10px;
+    }
+
+    .nutwo .fix {
+        margin-top: 30px;
+    }
+
+    
+    
+    .nutton button {
+        border: 1px solid white;
+        border-radius: 100px;
+        padding: 7px 3px;
+        margin-bottom: 40px;
+        margin-right: 20px;
+    }
+    
+    .nutton1 {
+        margin-bottom: 30px;
+    }
+    
+    .nutton1 button:nth-child(1) {
+        border: 1px solid;
+        padding: 7px 3px;
+        background-color: black;
+        color: white;
+        font-size: large;
+    }
+    
+    /* .nutton1 button:nth-child(2) {
+        border: 1px solid;
+        padding: 13px 8px;
+        margin-left: 10px;
+        background-color: #9aa9a7;
+    } */
+    
+    .nutton1 a {
+        border: 1px solid;
+        padding: 9px 10px;
+    
+        background-color: #9aa9a7;
+    }
+    
+    .numero {
+        margin-bottom: 20px;
+        position: relative;
+        left: 40px;
+    }
+    
+    .uno {
+        margin-bottom: 15px;
+        font-size: medium;
+        display: inline;
+        position: absolute;
+        left: 35px;
+    }
+    
+    .unos {
+        display: none;
+        position: absolute;
+        left: 720px;
+        color: grey;
+    }
+
+
+    .delivery {
+        margin-top: -100px;
+       margin-bottom: -100px; 
+    }
+
+    /* FOOTER */
+
+.fix-three {
+    display: none;
+}
+
+.fix-two {
+    display: none;
+}
+
+.fix-one {
+    display: none;
+}
+
+.pa {
+    display: none;
+}
+
+
+.last input{
+    border-radius: 10px 10px;
+    padding: 13px;
+    font-family: 'Open Sans', sans-serif;
+
+ }
+
+ #basic-addon2{
+    background-color: #716565;
+    color: #FFFFFF;
+    border: 1px #9aa9a7;
+    border-radius: 1px 7px 7px 1px;
+    font-family: 'Open Sans', sans-serif;
+ }
+
+    #reviews {
+        position: relative;
+        top: 110px;
+    }
+
+    .imgss {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        margin-right: 40px;
+        margin-left: 30px;
+        margin-bottom: 80px;
+    }
+    
+    .imgss img{
+        width: 100px;
+        height: 150px;
+        margin-top: 25px;
+    
+    }
+    
+    .imgss span {
+        position: absolute;
+        left: 1px;
+        top: 70px;
+    }
+    
+     img {
+        width: 440px;
+        height: 500px;
+        margin-top: 25px;
+    }
+
+    .spaceme {
+        margin-top: 380px;
+        width: 90%;
+    }
+
+    .spaceme a {
+        text-decoration: none;
+        color: black;
+    }
+    
 }

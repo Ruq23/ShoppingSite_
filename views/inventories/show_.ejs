@@ -3,12 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="/stylesheets/show.css">
     <title>Document</title>
 </head>
@@ -83,7 +85,7 @@
             <h6><%=inventory.name%></h6>
             <!-- <h6>Item # <%=inventory._id%></h6> -->
             <h5><b>N<%=inventory.price%></b></h5>
-            <a href="/list/<%=inventory._id%>/reviews">Check Reviews</a> <hr>
+            <a id="reviews" href="/list/<%=inventory._id%>/reviews">Check Reviews</a> <hr>
             <!-- <p>UK Size: Model wears a size 6 and is 5'10. <span>Size Chart</span></p> -->
             <!-- <div class="nutton">
                 <button>4</button>
@@ -101,11 +103,11 @@
             <h6>ABOUT</h6>
             <p><%=inventory.specifications%></p> <br>
             <!-- <h6>FABRIC DETAILS</h6> -->
-            <h6>DELIVERY</h6>
+            <h6 class="delivery">DELIVERY</h6>
             <p>Delivery takes 3-5 working days.</p>
             </div>
         </div>
-        <div>
+        <div class="spaceme">
             <div><h5 class="uno">YOU WILL LOVE THESE TOO</h5> <H5 class="unos">NEW IN</H5></div>
             <div class="imgss">
                 <div>
