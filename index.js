@@ -29,8 +29,8 @@ const LocalStrategy = require('passport-local');
 const flash = require('connect-flash');
 const { isAuthor } = require('./middleware.js');
 const cart = require('./models/cart.js');
-const port = process.env.PORT || 3000;
-
+const PORT = process.env.PORT || 3000;
+const mongoSanitize = require('express-mongo-sanitize');
 // const mongoStore = require('connect-mongo')(session);
 
 
@@ -39,11 +39,15 @@ const port = process.env.PORT || 3000;
 //     useUnifiedTopology: true
 // });
 
-mongoose.connect('mongodb://mongo:vhwFwpXbFqED2wvouJam@containers-us-west-28.railway.app:6624', {
+// mongoose.connect('mongodb://mongo:vhwFwpXbFqED2wvouJam@containers-us-west-28.railway.app:6624', {
+//     useNewUrlParser: true,
+//     useUnifiedTopology: true
+// });
+
+mongoose.connect(process.env.MONGODB_CONNECT_URI), {
     useNewUrlParser: true,
     useUnifiedTopology: true
-});
-
+}
 
 const db = mongoose.connection;
 db.on("error", console.error.bind(console, "connection error"));
@@ -75,6 +79,10 @@ const sessionConfig = {
 
 app.use(session(sessionConfig));
 app.use(flash());
+
+app.use(mongoSanitize({
+    replaceWith: '_'
+}))
 
 app.use(passport.initialize());
 app.use(passport.session());
@@ -296,6 +304,6 @@ app.use((err, req, res, next) => {
     // res.status(statusCode).send('Error')
 })
 
-app.listen(port, "0.0.0.0", () => {
-    console.log('Serving on port 3000')
+app.listen(PORT, () => {
+    console.log('Serving on port ' + PORT)
 })
