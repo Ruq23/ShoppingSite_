@@ -1,22 +1,3 @@
-// const express = require('express');
-// const catchAsync = require('../utilities/catchAsync')
-// const Cart = require('../models/cart');
-// const { validateInventory } = require('../middleware');
-// const { isLoggedIn } = require('../middleware');
-// const { isAuthor } = require('../middleware');
-// const router = express.Router();
-// const carts = require('../controllers/cart')
-
-// router.route('/')
-//     .get(isLoggedIn, catchAsync(carts.getCart))
-//     .post(isLoggedIn, catchAsync(carts.addCart))
-//     .delete(isLoggedIn, catchAsync(carts.deleteCart))
-
-
-
-
-// module.exports = router;
-
 const express = require('express');
 const router = express.Router();
 
